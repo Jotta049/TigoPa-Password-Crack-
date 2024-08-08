@@ -76,7 +76,7 @@ Este README está estructurado y diseñado para proporcionar toda la informació
 
 
 
-```markdown
+
 # Instalación del Controlador para el Adaptador de Red RTL8188EUS en Kali Linux
 
 **Nota:** Esta guía está diseñada específicamente para el adaptador de red **RTL8188EUS**. La instalación del controlador y la configuración para el **Monitor Mode** y la **Inyección de Paquetes** pueden variar según el chipset del adaptador. Si estás utilizando un adaptador diferente, te recomendamos consultar la documentación específica de tu tarjeta de red y ajustar los pasos según sea necesario.
