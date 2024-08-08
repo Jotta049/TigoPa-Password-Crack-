@@ -178,4 +178,109 @@ sudo aireplay-ng --test wlan0
 Este proceso está específicamente diseñado para el adaptador de red **RTL8188EUS**. Ten en cuenta que no todos los adaptadores de red tienen el mismo chipset, por lo que es posible que necesites seguir pasos diferentes si utilizas un adaptador con un chipset distinto. Si tienes un adaptador diferente, te recomendamos que consultes la documentación específica del fabricante o el repositorio correspondiente para tu chipset.
 
 Si encuentras algún problema durante el proceso o tienes alguna pregunta, no dudes en abrir un issue en este repositorio. También puedes contribuir con mejoras a esta guía si encuentras formas de optimizar el proceso.
+
+
+Aquí está la guía actualizada con la opción `--kill` para Wifite y la información sobre las herramientas necesarias, incluidas las relacionadas con `hastools`:
+
+```markdown
+# Guía de Instalación y Uso de Wifite con Diccionarios Personalizados en Kali Linux
+
+Esta guía explica cómo instalar Wifite en Kali Linux, cómo usar un diccionario personalizado para auditar redes Wi-Fi, y cómo descargar e instalar el diccionario Rockyou si no lo tienes.
+
+## Índice
+
+- [Requisitos Previos](#requisitos-previos)
+- [Instalación de Wifite](#instalación-de-wifite)
+- [Instalar Herramientas Necesarias](#instalar-herramientas-necesarias)
+- [Descargar e Instalar el Diccionario Rockyou](#descargar-e-instalar-el-diccionario-rockyou)
+- [Uso de Wifite con Diccionarios Personalizados](#uso-de-wifite-con-diccionarios-personalizados)
+- [Consideraciones Finales](#consideraciones-finales)
+
+## Requisitos Previos
+
+Antes de comenzar, asegúrate de que tu sistema esté actualizado y de que tengas las herramientas necesarias instaladas.
+
+```bash
+sudo apt update
+sudo apt upgrade
+sudo apt install wifite
 ```
+
+## Instalación de Wifite
+
+Para instalar Wifite en Kali Linux, ejecuta el siguiente comando:
+
+```bash
+sudo apt install wifite
+```
+
+## Instalar Herramientas Necesarias
+
+Wifite requiere algunas herramientas adicionales para funcionar correctamente. Una de las herramientas esenciales es `aircrack-ng`, que se utiliza para la recuperación de contraseñas. Asegúrate de instalarlo con:
+
+```bash
+sudo apt install aircrack-ng
+```
+
+También asegúrate de tener `reaver` y `pixie-wps` instalados si planeas usar WPS para ataques:
+
+```bash
+sudo apt install reaver
+sudo apt install pixiewps
+```
+
+## Descargar e Instalar el Diccionario Rockyou
+
+El diccionario Rockyou es un archivo muy común utilizado para ataques de diccionario en auditorías de seguridad. Si no tienes el diccionario Rockyou, puedes instalarlo con los siguientes pasos:
+
+1. **Descargar el Diccionario Rockyou:**
+
+   El diccionario Rockyou se encuentra en el paquete `wordlists` de Kali Linux. Si no está instalado, puedes hacerlo con el siguiente comando:
+
+   ```bash
+   sudo apt install wordlists
+   ```
+
+2. **Ubicación del Diccionario Rockyou:**
+
+   Una vez instalado, el diccionario Rockyou estará ubicado en:
+
+   ```bash
+   /usr/share/wordlists/rockyou.txt.gz
+   ```
+
+   Debes descomprimir el archivo para usarlo:
+
+   ```bash
+   sudo gunzip /usr/share/wordlists/rockyou.txt.gz
+   ```
+
+   Esto dejará el archivo en `/usr/share/wordlists/rockyou.txt`.
+
+## Uso de Wifite con Diccionarios Personalizados
+
+1. **Ejecutar Wifite con Diccionario Personalizado y Rockyou:**
+
+   Si tienes un diccionario personalizado llamado `wifi_passwords.txt` y deseas usarlo junto con el diccionario Rockyou, puedes ejecutar Wifite de la siguiente manera:
+
+   ```bash
+   sudo wifite --dict /ruta/a/wifi_passwords.txt --dict /usr/share/wordlists/rockyou.txt --kill
+   ```
+
+   Reemplaza `/ruta/a/wifi_passwords.txt` con la ruta correcta a tu diccionario personalizado. La opción `--kill` asegura que Wifite mate los procesos relacionados con el adaptador de red que podrían interferir con la auditoría.
+
+2. **Ejecutar Wifite:**
+
+   Para iniciar Wifite y comenzar la auditoría, simplemente ejecuta:
+
+   ```bash
+   sudo wifite --kill
+   ```
+
+   Luego, selecciona la red Wi-Fi que deseas auditar y Wifite usará los diccionarios especificados para intentar recuperar la contraseña.
+
+## Consideraciones Finales
+
+**Wifite** es una herramienta poderosa para la auditoría de redes Wi-Fi, pero debe usarse de manera ética y legal. Asegúrate de tener permiso explícito para auditar cualquier red que no sea de tu propiedad. El uso indebido de estas herramientas puede tener consecuencias legales graves.
+
+Si encuentras algún problema durante el uso de Wifite o tienes alguna pregunta, no dudes en abrir un issue en este repositorio. También puedes contribuir con mejoras a esta guía si encuentras formas de optimizar el proceso.
