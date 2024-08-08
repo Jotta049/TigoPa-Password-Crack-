@@ -182,7 +182,7 @@ Si encuentras algún problema durante el proceso o tienes alguna pregunta, no du
 
 Aquí está la guía actualizada con la opción `--kill` para Wifite y la información sobre las herramientas necesarias, incluidas las relacionadas con `hastools`:
 
-```markdown
+
 # Guía de Instalación y Uso de Wifite con Diccionarios Personalizados en Kali Linux
 
 Esta guía explica cómo instalar Wifite en Kali Linux, cómo usar un diccionario personalizado para auditar redes Wi-Fi, y cómo descargar e instalar el diccionario Rockyou si no lo tienes.
