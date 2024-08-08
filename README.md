@@ -75,7 +75,6 @@ Este README está estructurado y diseñado para proporcionar toda la informació
 
 
 
-Aquí tienes la guía actualizada con un comentario al principio para explicar el contexto:
 
 ```markdown
 # Instalación del Controlador para el Adaptador de Red RTL8188EUS en Kali Linux
