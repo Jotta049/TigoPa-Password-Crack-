@@ -110,7 +110,11 @@ Para asegurarte de que tu sistema reconoce correctamente el adaptador de red, ut
 lsusb
 ```
 
-Este comando listará todos los dispositivos USB conectados. Busca en la lista tu adaptador **RTL8188EUS** para confirmar que está correctamente conectado.
+Este comando listará todos los dispositivos USB conectados. Busca en la lista tu adaptador El mio es **RTL8188EUS** el tuyo puede contener otro nombre pero en este vas a terminar encontrando un nombre que deberia estar acompañado de una descripcion que puede decir Network Adapter, Wireless adapter, Realtek o algo muy parecido a esto:
+```bash
+Bus 003 Device 008: ID 0bda:8179 Realtek Semiconductor Corp. RTL8188EUS 802.11n Wireless Network Adapter
+```
+ Ya despues de esto debemos considerar que si no tienen el mismo adaptador deberan adpatar sus busquedas de los repositorios y las carpetas de descarga ademas de ciertos comandos.
 
 ## Descarga y Configuración del Controlador
 
@@ -175,5 +179,3 @@ Este proceso está específicamente diseñado para el adaptador de red **RTL8188
 
 Si encuentras algún problema durante el proceso o tienes alguna pregunta, no dudes en abrir un issue en este repositorio. También puedes contribuir con mejoras a esta guía si encuentras formas de optimizar el proceso.
 ```
-
-Esta versión incluye un comentario al principio para contextualizar que la guía está centrada en el RTL8188EUS, pero los pasos pueden variar para otros adaptadores.
