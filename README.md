@@ -1,22 +1,6 @@
 # TigoPa-Password-Crack-
 Esto es una guia educativa parte de un proyecto de mi carrera universitaria en ciberseguridad esta va enfocada en hacer conciencia de las buenas practicas de ciberseguridad en nuestras redes domesticas.
-
-Perfecto, aquí tienes el README adaptado para un repositorio en GitHub:
-
----
-
-# Optimización de Diccionario de Contraseñas para Redes WiFi
-
-## Descripción
-
-Este proyecto tiene como objetivo la creación y optimización de un diccionario de contraseñas para redes WiFi gestionadas por una empresa de telecomunicaciones en Panamá. Mediante la utilización de análisis estadístico y técnicas de automatización, se generó un diccionario que maximiza la probabilidad de éxito en pruebas de seguridad (pentesting) al enfocarse en las contraseñas más probables.
-
-## Objetivos
-
-- **Reducción del Tamaño del Diccionario**: Limitar el número de contraseñas, excluyendo aquellas que son estadísticamente menos probables.
-- **Generación de Contraseñas Probables**: Utilizar datos reales y ajustar los rangos de números de suscriptor para incluir todas las contraseñas potencialmente válidas.
-- **Automatización del Proceso**: Crear un programa en C++ que automatice la generación del diccionario, facilitando futuras expansiones y ajustes.
-
+## Uso del creador de contraseñas 
 ## Implementación
 
 El proyecto incluye un programa en C++ que:
