@@ -123,7 +123,7 @@ Bus 003 Device 008: ID 0bda:8179 Realtek Semiconductor Corp. RTL8188EUS 802.11n 
    Descarga el controlador desde el repositorio oficial de GitHub:
 
    ```bash
-   git clone https://github.com/aircrack-ng/rtl8188eus
+   git clone https://gitlab.com/kalilinux/packages/realtek-rtl8188eus-dkms.git
    cd rtl8188eus
    ```
 
