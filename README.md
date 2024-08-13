@@ -24,7 +24,7 @@ Para compilar y ejecutar el programa, necesitarás:
 Clona el repositorio en tu máquina local:
 
 ```bash
-git clone https://github.com/tuusuario/tu-repositorio.git
+git clone https://github.com/Jotta049/TigoPa-Password-Crack-.git
 cd tu-repositorio
 ```
 
